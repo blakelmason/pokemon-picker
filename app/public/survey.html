@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+      integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+      integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-    crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col border rounded bg-light p-2 mx-3 mt-3">
-        <h1 class="text-center">Survey</h1>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col border rounded bg-light p-2 mx-3 mt-3">
+          <h1 class="text-center">Survey</h1>
+        </div>
+      </div>
+      <div class="row pt-4">
+        <div class="col">
+          <div class="text-center h5">Click to Play Inspiring Music!</div>
+          <div class="d-flex justify-content-center">
+            <audio controls>
+              <source
+                src="./Pokémon Stadium - Super Smash Bros. for Wii U _OST_.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row pt-4">
-      <div class="col d-flex justify-content-center">
-        <audio controls autoplay loop>
-          <source src="https://vocaroo.com/media_command.php?media=s1G1yWuieuRf&command=download_mp3" type="audio/mpeg">
-          <source src="https://vocaroo.com/media_command.php?media=s1G1yWuieuRf&command=download_webm" type="audio/webm">
-          <p>Your browser does not support in page playback. Please
-            <a href="https://vocaroo.com/media_command.php?media=s1G1yWuieuRf&command=download_mp3">download as MP3</a>.</p>
-        </audio>
-      </div>
-    </div>
-  </div>
-  </div>
-  <hr>
-  <div class="container">
-    <div class="row">
-      <!-- <form class="w-100">
+    <hr />
+    <div class="container">
+      <div class="row">
+        <!-- <form class="w-100">
         <div class="col-12 mb-2">
           <label class="m-0">
             <h4 class="m-0">Name</h4>
@@ -54,114 +68,150 @@
           <hr>
         </div>
       </form> -->
-      <div class="col-12">
-        <h4>Questions</h4>
-      </div>
-      <div class="col-12 mb-4">
-        <form>
-          <label class="pt-1 mb-0 question-label">
-            1. Red is awesome.
-          </label>
-          <label class="pt-1 mb-0 question-label">
-            2. I like cheese.
-          </label>
-          <label class="pt-1 mb-0 question-label">
-            3. Watching sports is fun.
-          </label>
-          <label class="pt-1 mb-0 question-label">
-            4. Video games are fun.
-          </label>
-          <label class="pt-1 mb-0 question-label">
-            5. I like cats.
-          </label>
-          <label class="pt-1 mb-0 question-label">
-            6. I like dogs.
-          </label>
-          <label class="pt-1 mb-0 question-label">
-            7. I like moose.
-          </label>
-          <label class="pt-1 mb-0 question-label">
-            8. Cooking is fun.
-          </label>
-          <label class="pt-1 mb-0 question-label">
-            9. I like to read books.
-          </label>
-          <label class="pt-1 mb-0 question-label">
-            10. Harambe did nothing wrong.
-          </label>
-        </form>
-        <hr>
-        <button type="button" class="btn btn-primary btn-lg float-left mr-3 mt-3" id="submit-button" onclick="function1()">Submit</button>
-        <img src="https://zippy.gfycat.com/MintyAnyGrouse.gif" class="img-fluid" alt="Responsive image" style="width: 70px">
-      </div>
-    </div>
-  </div>
-  <div class="modal fade  text-center" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title  m-auto" id="exampleModalLongTitle"></h5>
+        <div class="col-12">
+          <h4>Questions</h4>
         </div>
-        <div class="modal-body">
-          <p class="modal-p"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-block btn-secondary" data-dismiss="modal">Close</button>
+        <div class="col-12 mb-4">
+          <form>
+            <label class="pt-1 mb-0 question-label">
+              1. Red is awesome.
+            </label>
+            <label class="pt-1 mb-0 question-label">
+              2. I like cheese.
+            </label>
+            <label class="pt-1 mb-0 question-label">
+              3. Watching sports is fun.
+            </label>
+            <label class="pt-1 mb-0 question-label">
+              4. Video games are fun.
+            </label>
+            <label class="pt-1 mb-0 question-label">
+              5. I like cats.
+            </label>
+            <label class="pt-1 mb-0 question-label">
+              6. I like dogs.
+            </label>
+            <label class="pt-1 mb-0 question-label">
+              7. I like moose.
+            </label>
+            <label class="pt-1 mb-0 question-label">
+              8. Cooking is fun.
+            </label>
+            <label class="pt-1 mb-0 question-label">
+              9. I like to read books.
+            </label>
+            <label class="pt-1 mb-0 question-label">
+              10. Harambe did nothing wrong.
+            </label>
+          </form>
+          <hr />
+          <button
+            type="button"
+            class="btn btn-primary btn-lg float-left mr-3 mt-3"
+            id="submit-button"
+            onclick="function1()"
+          >
+            Submit
+          </button>
+          <img
+            src="https://zippy.gfycat.com/MintyAnyGrouse.gif"
+            class="img-fluid"
+            alt="Responsive image"
+            style="width: 70px"
+          />
         </div>
       </div>
     </div>
-  </div>
-  <script>;
-    $('.question-label').after('<select class="form-control question-options mb-3"></select>');
-    $('.question-options').append('<option disabled selected value> - select an option - </option><option>1 (strongly disagree)</option><option>2</option><option>3 (meh. . .)</option><option>4</option><option>5 (strongly agree)</option>');
-    function1 = () => {
-      $('small').remove();
-      var validated = true;
+    <div
+      class="modal fade  text-center"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title  m-auto" id="exampleModalLongTitle"></h5>
+          </div>
+          <div class="modal-body">
+            <p class="modal-p"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-block btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $('.question-label').after(
+        '<select class="form-control question-options mb-3"></select>'
+      )
+      $('.question-options').append(
+        '<option disabled selected value> - select an option - </option><option>1 (strongly disagree)</option><option>2</option><option>3 (meh. . .)</option><option>4</option><option>5 (strongly agree)</option>'
+      )
+      function1 = () => {
+        $('small').remove()
+        var validated = true
 
-      // var name = $('.name').val();
-      // var photo = $('.photo').val();
-      // if (!name) {
-      //   $('.name').after('<small class="form-text text-danger">Please provide your name.</small>');
-      //   validated = false;
-      // }
-      // if (!photo) {
-      //   $('.photo').after('<small class="form-text text-danger">Please provide a link for your photo.</small>');
-      //   validated = false;
-      // }
+        // var name = $('.name').val();
+        // var photo = $('.photo').val();
+        // if (!name) {
+        //   $('.name').after('<small class="form-text text-danger">Please provide your name.</small>');
+        //   validated = false;
+        // }
+        // if (!photo) {
+        //   $('.photo').after('<small class="form-text text-danger">Please provide a link for your photo.</small>');
+        //   validated = false;
+        // }
 
-      $('select option:selected').each(function (index, element) {
-        var selected = $(this);
-        if (selected.text() === ' - select an option - ') {
-          selected.parent().prev().after('<small class="form-text text-danger m-0">Please provide an answer.</small>');
-          validated = false;
-        }
-      });
+        $('select option:selected').each(function(index, element) {
+          var selected = $(this)
+          if (selected.text() === ' - select an option - ') {
+            selected
+              .parent()
+              .prev()
+              .after(
+                '<small class="form-text text-danger m-0">Please provide an answer.</small>'
+              )
+            validated = false
+          }
+        })
 
-      if (!validated) {
-        $('button').after('<small class="form-text text-danger mt-4 float-left">Missing fields.</small>');
-        document.getElementById('submit-button').scrollIntoView();
-      } else {
-        var answers = [];
-        $('select option:selected').each(function (index, element) {
-          answers.push(Number($(this).text()[0]));
-        });
-        var obj = {
-          //name: name,
-          //photo: photo,
-          answers: answers
-        }
-        axios.post('/survey', obj)
-          .then(function (res) {
-            var data = res.data[0];
-            $('.modal-title').text(data.name);
+        if (!validated) {
+          $('button').after(
+            '<small class="form-text text-danger mt-4 float-left">Missing fields.</small>'
+          )
+          document.getElementById('submit-button').scrollIntoView()
+        } else {
+          var answers = []
+          $('select option:selected').each(function(index, element) {
+            answers.push(Number($(this).text()[0]))
+          })
+          var obj = {
+            //name: name,
+            //photo: photo,
+            answers: answers
+          }
+          axios.post('/survey', obj).then(function(res) {
+            var data = res.data[0]
+            $('.modal-title').text(data.name)
             $('.modal-p').text(`Type: ${data.type}`)
             $('.modal-image').remove()
-            $('.modal-body').append(`<div class="modal-image"><img src="${data.picture}" class="img-fluid" alt="Responsive image"></div>`)
-            $('#myModal').modal('show');
+            $('.modal-body').append(
+              `<div class="modal-image"><img src="${data.picture}" class="img-fluid" alt="Responsive image"></div>`
+            )
+            $('#myModal').modal('show')
           })
+        }
       }
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
